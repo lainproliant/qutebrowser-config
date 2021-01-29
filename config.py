@@ -94,3 +94,4 @@ c.url.default_page = "about:blank"
 # -------------------------------------------------------------------
 config.bind("J", "tab-prev")
 config.bind("K", "tab-next")
+config.bind(";i", "hint images userscript qute-open-url")
