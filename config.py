@@ -42,7 +42,8 @@ FONT = load_font_config()
 # -------------------------------------------------------------------
 # Config settings
 # -------------------------------------------------------------------
-config.load_autoconfig(False) # Don't load autoconfig.yaml.
+#config.load_autoconfig(False) # Don't load autoconfig.yaml.
+config.load_autoconfig()
 c.completion.cmd_history_max_items = -1
 c.tabs.last_close = "close"
 
@@ -54,7 +55,7 @@ c.content.blocking.whitelist = []
 c.content.canvas_reading = False
 c.content.fullscreen.overlay_timeout = 0
 c.content.fullscreen.window = True
-c.content.mute = True
+c.content.mute = False
 c.content.pdfjs = True
 
 c.downloads.position = "bottom"
@@ -95,3 +96,5 @@ c.url.default_page = "about:blank"
 config.bind("J", "tab-prev")
 config.bind("K", "tab-next")
 config.bind(";i", "hint images userscript qute-open-url")
+config.bind(";s", "spawn --userscript qute-search-selection")
+config.bind("A", "tab-mute")
